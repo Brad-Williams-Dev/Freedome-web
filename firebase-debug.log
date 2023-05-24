@@ -1,0 +1,47 @@
+[debug] [2023-05-24T19:05:01.986Z] ----------------------------------------------------------------------
+[debug] [2023-05-24T19:05:01.986Z] Command:       /Users/bradwilliams/.nvm/versions/node/v16.19.0/bin/node /Users/bradwilliams/.nvm/versions/node/v16.19.0/bin/firebase init functions
+[debug] [2023-05-24T19:05:01.987Z] CLI Version:   12.2.0
+[debug] [2023-05-24T19:05:01.987Z] Platform:      darwin
+[debug] [2023-05-24T19:05:01.987Z] Node Version:  v16.19.0
+[debug] [2023-05-24T19:05:01.987Z] Time:          Wed May 24 2023 16:05:01 GMT-0300 (Atlantic Daylight Saving Time)
+[debug] [2023-05-24T19:05:01.987Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-05-24T19:05:01.988Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2023-05-24T19:05:01.997Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-05-24T19:05:01.998Z] > authorizing via signed-in user (williamsbrad569@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  /Users/bradwilliams/Builds/freedom-web
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 
+[debug] [2023-05-24T19:05:02.150Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2023-05-24T19:05:02.150Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[info] i  If you want to create a project in a Google Cloud organization or folder, please use "firebase projects:create" instead, and return to this command when you've created the project. 
+[debug] [2023-05-24T19:05:34.805Z] > refreshing access token with scopes: []
+[debug] [2023-05-24T19:05:34.806Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2023-05-24T19:05:34.806Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-05-24T19:05:34.973Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2023-05-24T19:05:34.973Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2023-05-24T19:05:34.986Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[debug] [2023-05-24T19:05:34.986Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"freedom-web","name":"freedom-web"}
+[debug] [2023-05-24T19:05:35.306Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 409
+[debug] [2023-05-24T19:05:35.306Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"error":{"code":409,"message":"Requested entity already exists","status":"ALREADY_EXISTS"}}
+[debug] [2023-05-24T19:05:35.309Z] FirebaseError: HTTP Error: 409, Requested entity already exists
+    at responseToError (/Users/bradwilliams/.nvm/versions/node/v16.19.0/lib/node_modules/firebase-tools/lib/responseToError.js:49:12)
+    at RetryOperation._fn (/Users/bradwilliams/.nvm/versions/node/v16.19.0/lib/node_modules/firebase-tools/lib/apiv2.js:288:77)
+    at processTicksAndRejections (node:internal/process/task_queues:96:5)
+[error] 
+[error] Error: Failed to create project because there is already a project with ID freedom-web. Please try again with a unique project ID.
